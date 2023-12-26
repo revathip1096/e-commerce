@@ -1,22 +1,31 @@
 import React from 'react'
 import Card from '../components/card'
 import Hero from '../components/navbar'
+import { useQuery } from '@tanstack/react-query'
 
 export default function Homepage() {
-  const items=[{image:"https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",name:"nike",description:"hello world"},
-  {image:"https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",name:"reebok",description:"hello world2"},
-  {image:"https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg",name:"puma",description:"hello world3"}]
+  const fetchProductList=async ()=>{
+    const response=await fetch('https://fakestoreapi.com/products')
+    return response.json();
+}
+  const { isLoading, isError, data:products, error } = useQuery({
+    queryKey: ['product'],
+    queryFn: fetchProductList,
+  })
+  if(isLoading)
+  
+    return <p>Loading........</p>
+  
+
+ 
   return (
     <Hero>
-    <div className='flex flex-wrap gap-3 aligin-center justify-center shrink'>
+    <div className='grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-2 m-4 '>
       {
-      items.map((item, i) =>{
+      products?.map((item, i) =>{
         return <Card key={i} product={item}/>
       })
     }
-      
-    
-
     </div>
     </Hero>
   )

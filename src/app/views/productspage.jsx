@@ -3,16 +3,16 @@ import Card from "../components/card";
 import Hero from "../components/navbar";
 import { useQuery } from "@tanstack/react-query";
 
-export default function Homepage() {
+export default function Productspage() {
   const fetchProductList = async () => {
     const response = await fetch("https://fakestoreapi.com/products");
     return response.json();
   };
   const {
     isLoading,
-    isError,
+    
     data: products,
-    error,
+  
   } = useQuery({
     queryKey: ["productdata"],
     queryFn: fetchProductList,

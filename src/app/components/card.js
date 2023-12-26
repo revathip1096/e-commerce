@@ -15,8 +15,8 @@ function Card({ product }) {
         <div>
           <figure>
             <img
-              onClick={() => router.push(`/products/${product.id}`)}
-              className="cursor-pointer object-fill h-60 w-96 rounded-lg"
+              onClick={() => router.push(`/product/${product.id}`)}
+              className="cursor-pointer object-fill h-60 w-96 rounded-lg bg-transparent"
               src={product.image}
               alt="Shoes"
             />
@@ -24,7 +24,7 @@ function Card({ product }) {
         </div>
         <div className="card-body">
           <h2 className="card-title line-clamp-1">
-            <Link href={`/products/${product.id}`}>{product.title}</Link>
+            <Link href={`/product/${product.id}`}>{product.title}</Link>
           </h2>
           <p className="line-clamp-3">{product.description}</p>
           <div className="card-actions justify-end">

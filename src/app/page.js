@@ -1,14 +1,16 @@
 "use client"
 import Image from 'next/image'
 import Hero from './components/navbar'
-import Homepage from './views/homepage'
+import Productspage from './views/productspage'
 
 
 export default function Home() {
   
   return (
-    
-        <Homepage />
+    <>
+      <Hero />
+      <>HII</>
+    </>
    
   )
 }

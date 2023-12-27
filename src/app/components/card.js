@@ -1,14 +1,9 @@
 import React from "react";
-import { QueryClient } from "@tanstack/react-query";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function Card({ product }) {
   const router = useRouter();
-  const queryClient = new QueryClient();
-  console.log(queryClient);
-  const data = queryClient.getQueryData(["productdata"]);
-  console.log(data);
   return (
     <div>
       <div className="card card-compact bg-base-100 shadow-2xl hover:scale-105 ease-in duration-200 min">

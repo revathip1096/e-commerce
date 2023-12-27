@@ -10,14 +10,16 @@ export default function Productspage() {
   };
   const {
     isLoading,
-    
     data: products,
-  
+    
   } = useQuery({
     queryKey: ["productdata"],
     queryFn: fetchProductList,
   });
+
+  
   if (isLoading) return <p>Loading........</p>;
+  console.log(products);
 
   return (
     <>

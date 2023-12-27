@@ -3,7 +3,7 @@ import {create} from "zustand";
 import { persist  } from 'zustand/middleware';
 
 export const useTheme = create(persist((set) => ({
-    theme: window.localStorage.getItem("theme")||"dark",
+    theme: localStorage.getItem("theme")||"dark",
     settheme: (newtheme) =>
       set((state) => ({
         theme: newtheme,

@@ -7,6 +7,7 @@ import {
   const queryClient = new QueryClient()
 
 function Queryprovider({children}) {
+  
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   )

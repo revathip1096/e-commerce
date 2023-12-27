@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <Themeprovider>
       <Queryprovider>{children}</Queryprovider>
+      
     </Themeprovider>
   );
 }

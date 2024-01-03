@@ -5,7 +5,6 @@ function About() {
   return (
     
     <div>
-    <Navbar/>
       About page
     </div>
     

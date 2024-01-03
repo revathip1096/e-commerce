@@ -23,7 +23,7 @@ export default function Productspage() {
 
   return (
     <>
-      <Hero />
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-x-4 gap-y-3 m-4 ">
         {products?.map((item, i) => {
           return <Card key={i} product={item} />;

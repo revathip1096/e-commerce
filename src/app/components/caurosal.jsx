@@ -31,7 +31,7 @@ function Caurosal() {
   return (
     <div className="my-20">
       <div
-        className="mx-12  lg:mx-62  w-92 "
+        className="mx-3 md:mx-12  lg:mx-62  w-92 "
         onMouseLeave={() => {
           setvisible(false);
         }}
@@ -68,17 +68,22 @@ function Caurosal() {
               >
                 <SwiperSlide>
                   <div className="flex flex-col md:flex-row justify-center items-center md:justify-between  w-full space-y-2">
-                    <div className="flex justify-center items-center flex-col w-full md:w-[50%] ">
+                    <div className="flex justify-center items-center flex-col space-y-3 w-full md:w-[50%] pl-12">
                       <p className="mt:0 md:-mt-24 text-xl font-semibold">
                         {ele.title}
+                        
                       </p>
-                      <button className=" btn-sm place-self-center btn btn-active btn-primary">
-                        Shop
+                      <p className="mt:0 md:-mt-24 text-l font-normal line-clamp-3">
+                        {ele.description}
+                        
+                      </p>
+                      <button className=" btn-md place-self-center btn btn-active btn-primary">
+                        Buy now
                       </button>
                     </div>
-                    <div className="md:w-[50%] w-auto">
+                    <div className="md:w-[40%] w-auto">
                       <img
-                        className="object-fill h-[60vh] md:w-[60vw] w-full"
+                        className="object-fill md:h-[60vh]  h-[30vh] md:w-[50vw] w-full"
                         src={ele.image}
                       />
                     </div>

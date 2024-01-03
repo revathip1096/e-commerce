@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Themeprovider from "./_providers/themeprovider";
 import Queryprovider from "./_providers/queryprovider";
+import Hero from "../app/components/navbar"
+import Footer from "./components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +15,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <Themeprovider>
-      <Queryprovider>{children}</Queryprovider>
+   
+      <Queryprovider> <Hero><Footer>{children}</Footer></Hero></Queryprovider>
       
     </Themeprovider>
   );

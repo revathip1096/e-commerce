@@ -6,6 +6,7 @@ function Themeprovider({children}) {
     const {theme}=useTheme()
   return (
     <html data-theme={theme} lang="en">
+    <link rel="icon" type="image/x-icon" href="../icon.png"></link>
     
 <link
   rel="stylesheet"

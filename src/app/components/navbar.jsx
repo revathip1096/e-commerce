@@ -105,9 +105,9 @@ function Navbar({ children }) {
             </ul>
           </div>
         </div>
-        <div className="hidden md:block avatar offline sm">
-          <div className="w-12 rounded-full">
-            <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div className="hidden md:block avatar ">
+          <div className="w-10 ring ring-primary ring-offset-1 bg-neutral-content rounded-full">
+            <img src="./icon.png" className=""/>
           </div>
         </div>
       </div>

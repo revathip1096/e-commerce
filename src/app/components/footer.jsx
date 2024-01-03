@@ -68,7 +68,7 @@ const policy = [
         </nav>
       </footer>
       <footer className="pt-4 md:pt-8 footer flex justify-between flex-col md:flex-row gap-5 flex-col-reverse ">
-        <p>@ {year} R. All rights reserved.</p>
+        <p>@ {year} Isha. All rights reserved.</p>
         <div className="flex gap-4 flex-col md:flex-row">
           {policy.map((policy,id) => (
             <a key={id} className="link underline">{policy}</a>

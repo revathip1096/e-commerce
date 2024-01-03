@@ -7,6 +7,7 @@ function Footer({children}) {
   "homepage",
   "products",
   "about",
+  "contact"
 ];
 
 let Social = [
@@ -33,10 +34,14 @@ const policy = [
     {children}
      <div className="divider"></div> 
    
-    <div className="flex flex-col p-5 -mt-10 md:p-10 text-sm">
+    <div className="flex flex-col p-5 md:-mt-10 md:p-10 text-sm">
       <footer className="footer">
         <aside className="w-full md:max-w-lg flex flex-col gap-4">
-          <h1 className="font-extrabold text-2xl">Logo</h1>
+          <div className="md:block avatar ">
+          <div className="w-16 md:w-24  bg-neutral-content rounded-full">
+            <img src="../icon.png" className=""/>
+          </div>
+        </div>
           <p>
             Join our newsletter to stay up to date on features and releases.
           </p>

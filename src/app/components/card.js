@@ -6,7 +6,7 @@ function Card({ product }) {
   const router = useRouter();
   return (
     <div>
-      <div className="card card-compact bg-base-100  shadow-2xl hover:scale-105 ease-in duration-200 min">
+      <div className="card card-compact bg-base-100  shadow-lg hover:scale-105 ease-in duration-200 min">
         <div>
           <figure>
             <img

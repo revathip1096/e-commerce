@@ -12,6 +12,7 @@ import "../../../public/style.css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
 
 function Caurosal() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -77,9 +78,11 @@ function Caurosal() {
                         {ele.description}
                         
                       </p>
-                      <button className=" btn-md place-self-center btn btn-active btn-primary">
+                      <Link href={`/product/${ele.id}`}>
+                      <button  className=" btn-md place-self-center btn btn-active btn-primary">
                         Buy now
                       </button>
+                      </Link>
                     </div>
                     <div className="md:w-[40%] w-auto">
                       <img

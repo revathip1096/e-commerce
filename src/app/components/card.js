@@ -1,17 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Example from "./modal";
+import { useState } from "react";
 
 function Card({ product }) {
   const router = useRouter();
+   const [open, setOpen] = useState(false)
   return (
     <div>
-      <div className="card card-compact bg-base-100  shadow-lg hover:scale-105 ease-in duration-200 min">
+      <div className="card card-compact bg-base-100  shadow-lg  min">
         <div>
           <figure>
             <img
-              onClick={() => router.push(`/product/${product.id}`)}
-              className="cursor-pointer object-fill h-60 w-96 rounded-lg bg-transparent"
+              onClick={() => {setOpen(true)}}
+              className="hover:scale-110 ease-in duration-200 cursor-pointer object-fill h-60 w-96 rounded-lg bg-transparent"
               src={product.image}
               alt="Shoes"
             />
@@ -27,6 +30,7 @@ function Card({ product }) {
           </div>
         </div>
       </div>
+      <Example open={open} setOpen={setOpen} product={product}/>
     </div>
   );
 }

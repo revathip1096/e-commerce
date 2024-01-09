@@ -3,6 +3,7 @@ import { CiMail } from "react-icons/ci";
 import { FaPhone } from "react-icons/fa6";
 import { IoLocationOutline } from "react-icons/io5";
 function Contact() {
+  // eslint-disable-next-line react/jsx-key
   const contactIcon = [<CiMail />, <FaPhone />, <IoLocationOutline />];
   const contactInfo = [
     "hello@relume.io",

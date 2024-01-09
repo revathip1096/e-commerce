@@ -114,11 +114,11 @@ function Navbar({ children }) {
           </div>
         </div>
         <div className="flex gap-x-4">
-          {cartItems.length !== 0 && (
+          
             <div className="indicator p-2 border rounded-full hover:bg-base-200">
-              <div className="indicator-item badge badge-primary w-5 ">
+              {cartItems.length!==0&&(<div className="indicator-item badge badge-primary w-5 ">
                 {cartItems.length}
-              </div>
+              </div>)}
               <FaCartPlus
                 onClick={() => {
                   setOpen(true);
@@ -126,7 +126,7 @@ function Navbar({ children }) {
                 className="hover:text-primary text-base-content text-xl cursor-pointer md:hover:scale-[.95] ease-in duration-200 "
               />
             </div>
-          )}
+          
 
           <div className="hidden md:block avatar">
             <div className="w-10 ring ring-primary ring-offset-1 bg-neutral-content rounded-full">

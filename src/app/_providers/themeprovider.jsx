@@ -1,28 +1,34 @@
 "use client"
-import React from 'react'
-import { useTheme } from '../_stores/theme'
+import Head from 'next/head';
+import { useTheme } from '../_stores/theme';
+import { useEffect } from 'react';
 
-function Themeprovider({children}) {
-    const {theme}=useTheme()
+function Themeprovider({ children }) {
+  const { theme,settheme } = useTheme();
+  useEffect( ()=>{
+   settheme(theme);
+   console.log('theme123',theme);
+  },[])
+
+
   return (
-    <html data-theme={theme} lang="en">
-    <link rel="icon" type="image/x-icon" href="../icon.png"></link>
-    
-<link
-  rel="stylesheet"
-  type="text/css"
-  charset="UTF-8"
-  href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-/>
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-/>
-
-    <body>{children}</body>
-  </html>
-  )
+    <html lang="en">
+      <Head>
+        <link rel="icon" type="image/x-icon" href="../icon.png" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charSet="UTF-8"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+        />
+      </Head>
+      <body data-theme={theme}>{children}</body>
+    </html>
+  );
 }
-
-export default Themeprovider
+export default Themeprovider;

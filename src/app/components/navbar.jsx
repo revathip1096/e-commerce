@@ -37,8 +37,8 @@ function Navbar({ children }) {
     "sunset",
   ];
   const { theme, settheme } = useTheme();
-  const [open,setOpen]=useState(false);
-  const {cartItems}=useCart()
+  const [open, setOpen] = useState(false);
+  const { cartItems } = useCart();
   return (
     <>
       <div className="navbar bg-base-100 sticky top-0 z-30">
@@ -85,14 +85,14 @@ function Navbar({ children }) {
         </div>
 
         <div className="navbar-center">
-          <a className="btn btn-ghost text-xl no-animation">ISHA</a>
+          <button className="btn btn-ghost text-xl no-animation">ISHA</button>
         </div>
         <div className="navbar-end">
           <div className="dropdown dropdown-bottom">
             <ul className=" menu menu-horizontal px-1">
               <li>
                 <details>
-                  <summary>{theme}</summary>
+                  <summary>select theme</summary>
                   <ul className="p-2  z-50 h-72 overflow-x-hidden overflow-scroll">
                     {themes?.map((ele, id) => {
                       return (
@@ -113,19 +113,29 @@ function Navbar({ children }) {
             </ul>
           </div>
         </div>
-       <div className="flex gap-x-4">
-        <div className="indicator p-2 border rounded-full hover:bg-base-200">
-        {cartItems.length!==0&&<span className="indicator-item badge badge-primary w-5 ">{cartItems.length===0?"":cartItems.length}</span> }
-        <FaCartPlus onClick={()=>{setOpen(true)}} className="hover:text-primary text-base-content  text-xl cursor-pointer md:hover:scale-[.95] ease-in duration-200 " />
-        </div>
-        <div className="hidden md:block avatar">
-          <div className="w-10 ring ring-primary ring-offset-1 bg-neutral-content rounded-full">
-            <img src="./icon.png" />
+        <div className="flex gap-x-4">
+          {cartItems.length !== 0 && (
+            <div className="indicator p-2 border rounded-full hover:bg-base-200">
+              <div className="indicator-item badge badge-primary w-5 ">
+                {cartItems.length}
+              </div>
+              <FaCartPlus
+                onClick={() => {
+                  setOpen(true);
+                }}
+                className="hover:text-primary text-base-content text-xl cursor-pointer md:hover:scale-[.95] ease-in duration-200 "
+              />
+            </div>
+          )}
+
+          <div className="hidden md:block avatar">
+            <div className="w-10 ring ring-primary ring-offset-1 bg-neutral-content rounded-full">
+              <img src="./icon.png" />
+            </div>
           </div>
         </div>
-        </div>
       </div>
-      <Cart open={open} setOpen={setOpen}/>
+      <Cart open={open} setOpen={setOpen} />
       {children}
     </>
   );

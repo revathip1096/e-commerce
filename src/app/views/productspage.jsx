@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Card from "../components/card";
 import Hero from "../components/navbar";
@@ -19,7 +20,7 @@ export default function Productspage() {
 
   
   if (isLoading) return <p>Loading........</p>;
-  console.log(products);
+ 
 
   return (
     <>

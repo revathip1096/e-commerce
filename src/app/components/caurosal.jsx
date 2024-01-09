@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,8 +16,7 @@ import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 
 function Caurosal() {
-  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
-  console.log(isTabletOrMobile);
+  
   const [visible, setvisible] = useState(false);
   const fetchProductList = async () => {
     const response = await fetch("https://fakestoreapi.com/products");

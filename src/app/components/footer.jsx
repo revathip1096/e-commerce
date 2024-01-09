@@ -16,8 +16,11 @@ function Footer({ children }) {
 
   const policy = ["Privacy Policy", "Terms of Service", "Cookies Settings"];
   let socialIcons = [
+    // eslint-disable-next-line react/jsx-key
     <FaFacebook />,
+    // eslint-disable-next-line react/jsx-key
     <FaInstagram />,
+    // eslint-disable-next-line react/jsx-key
     <FaLinkedin />,
   ];
 

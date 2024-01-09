@@ -6,7 +6,7 @@ const Categories = () => {
   return (
     <div>
       <h3 className="text-2xl font-bold mx-3 md:mx-44 py-5 md:py-10">Categories</h3>
-      <div className=" mx-0 md:mx-36 text-center grid grid-cols-2 md:grid-cols-4 justify-items-center gap-y-6 ">
+      <div className="mx-[10%] gap-x-4 md:mx-36 text-center grid grid-cols-2  md:grid-cols-4 justify-items-center gap-y-6 ">
         {images.map((ele, id) => {
           return (
             <div key={id} className=" shadow-md border cursor-pointer hover:scale-[1.1] duration-200 border-1 rounded-2xl">

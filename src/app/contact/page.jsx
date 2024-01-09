@@ -18,7 +18,7 @@ function Contact() {
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         <div className="space-y-6">
           {contactIcon.map((icon, index) => (
-            <div className="flex gap-3">
+            <div key={index} className="flex gap-3">
               {React.cloneElement(icon, { size: 22 })}
               <a className="link link-hover">{contactInfo[index]}</a>
             </div>

@@ -56,7 +56,7 @@ const policy = [
           
         </aside>
         <nav className="gap-5">
-          <header className="footer-title">Column 1</header>
+          <header className="footer-title">Pages</header>
           {Column_1.map((column,id) => (
             <a key={id} className="link link-hover" href={column !== 'homepage' ? `./${column}` : './'}>{column}</a>
           ))}

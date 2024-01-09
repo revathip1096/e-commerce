@@ -47,7 +47,6 @@ function Contact() {
               type="checkbox"
               className="checkbox checkbox-md rounded-none"
             />
-            {"  "}
             <span className="text-sm">I accept the Terms</span>
           </div>
           <button className="btn btn-neutral btn-md rounded-none w-28">

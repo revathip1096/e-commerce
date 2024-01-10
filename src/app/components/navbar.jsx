@@ -10,31 +10,6 @@ function Navbar({ children }) {
   const themes = [
     "light",
     "dark",
-    "synthwave",
-    "retro",
-    "cyberpunk",
-    "valentine",
-    "halloween",
-    "garden",
-    "forest",
-    "aqua",
-    "lofi",
-    "pastel",
-    "fantasy",
-    "wireframe",
-    "luxury",
-    "dracula",
-    "cmyk",
-    "autumn",
-    "business",
-    "acid",
-    "lemonade",
-    "night",
-    "coffee",
-    "winter",
-    "dim",
-    "nord",
-    "sunset",
   ];
   const { theme, settheme } = useTheme();
   const [open, setOpen] = useState(false);
@@ -87,13 +62,13 @@ function Navbar({ children }) {
         <div className="navbar-center">
           <button className="btn btn-ghost text-xl no-animation">ISHA</button>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex gap-x-8">
           <div className="dropdown dropdown-bottom">
             <ul className=" menu menu-horizontal px-1">
               <li>
                 <details>
-                  <summary>select theme</summary>
-                  <ul className="p-2  z-50 h-72 overflow-x-hidden overflow-scroll">
+                  <summary>{theme}</summary>
+                  <ul className="p-2  z-50">
                     {themes?.map((ele, id) => {
                       return (
                         <li
@@ -113,7 +88,7 @@ function Navbar({ children }) {
             </ul>
           </div>
         </div>
-        <div className="flex gap-x-4">
+        <div className="flex gap-x-8">
           
             <div className="indicator p-2 border rounded-full hover:bg-base-200">
               {cartItems.length!==0&&(<div className="indicator-item badge badge-primary w-5 ">

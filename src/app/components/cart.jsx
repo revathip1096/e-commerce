@@ -120,6 +120,8 @@ export default function Cart({open,setOpen}) {
                       </div>
                     </div>
 
+                    
+                    {cartItems.length!==0 &&
                     <div className="border-t border-gray-200 px-4 py-12 md:py-0 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
@@ -148,6 +150,7 @@ export default function Cart({open,setOpen}) {
                         </p>
                       </div>
                     </div>
+                            }
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

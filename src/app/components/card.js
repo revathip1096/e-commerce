@@ -29,7 +29,7 @@ function Card({ product }) {
                 <img
                   className="h-10 w-10 rounded-full"
                   src={product.image}
-                  alt=""
+                  alt={product.title}
                 />
               </div>
               <div className="ml-3 flex-1">

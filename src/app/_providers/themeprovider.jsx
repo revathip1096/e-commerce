@@ -13,7 +13,7 @@ function Themeprovider({ children }) {
 
   return (
     <html lang="en">
-      <Head>
+      <head>
         <link rel="icon" type="image/x-icon" href="../icon.png" />
         <link
           rel="stylesheet"
@@ -26,7 +26,7 @@ function Themeprovider({ children }) {
           type="text/css"
           href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
         />
-      </Head>
+      </head>
       <body data-theme={theme}>{children}</body>
     </html>
   );

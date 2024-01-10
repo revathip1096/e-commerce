@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import { useCart } from '../_stores/cartStore'
+import Link from 'next/link'
 
 
 export default function Cart({open,setOpen}) {
@@ -74,7 +75,7 @@ export default function Cart({open,setOpen}) {
 
                       <div className="mt-8">
                         <div className="flow-root">
-                          <ul role="list" className="-my-6 divide-y divide-gray-200">
+                          {cartItems.length!==0?(<ul role="list" className="-my-6 divide-y divide-gray-200">
                             {cartItems.map((product) => (
                               <li key={product.id} className="flex py-6">
                                 <div className="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -111,12 +112,15 @@ export default function Cart({open,setOpen}) {
                                 </div>
                               </li>
                             ))}
-                          </ul>
+                          </ul>):<div className='text-center'>
+                          <img src="../cart_empty.png" />
+                          <Link onClick={()=>{setOpen(false)}} href="/products">Go to products page</Link>
+                          </div>}
                         </div>
                       </div>
                     </div>
 
-                    <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+                    <div className="border-t border-gray-200 px-4 py-12 md:py-0 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
                         <p>Subtotal</p>
                         <p>{total}</p>
